@@ -7,57 +7,72 @@ import {
   TrashIcon,
   UsersIcon,
 } from '@heroicons/react/24/outline'
+import { AnimatePresence, motion as m, useAnimation } from 'framer-motion'
 
 export default function ProductFeatures() {
+  const mainControls = useAnimation()
   return (
     <div className=' py-24  text-white'>
-      <div className='mx-auto max-w-7xl px-6 lg:px-8'>
-        <div className='mx-auto max-w-2xl lg:mx-0'>
-          <h2 className='text-3xl font-bold tracking-tight sm:text-4xl'>
-            Stay up to date with the latest technology
-          </h2>
-          <p className='mt-6 text-lg leading-8 text-gray-400'>
-            We have a wide selection of new equipment that includes everything
-            you need to keep your mobile business running smoothly.
-          </p>
-        </div>
-        <div className='mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none'>
-          <dl className='grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none md:grid-cols-2 '>
-            {features.map((feature) => (
-              <div
-                key={feature.name}
-                className='flex flex-col hover:bg-gray-800 p-2 rounded-md transition ease-out'>
-                <dt className='text-base font-semibold leading-7 text-white'>
-                  <div className='mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600'>
-                    <feature.icon
-                      className='h-6 w-6 text-white'
-                      aria-hidden='true'
-                    />
+      <AnimatePresence>
+        <div className='mx-auto max-w-7xl px-6 lg:px-8'>
+          <div className='mx-auto max-w-2xl lg:mx-0'>
+            <h2 className='text-3xl font-bold tracking-tight sm:text-4xl'>
+              Stay up to date with the latest technology
+            </h2>
+            <p className='mt-6 text-lg leading-8 text-gray-400'>
+              We have a wide selection of new equipment that includes everything
+              you need to keep your mobile business running smoothly.
+            </p>
+          </div>
+          <div className='mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none'>
+            <dl className='grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none md:grid-cols-2 '>
+              {features.map((feature, index) => (
+                <m.div
+                  initial={{ opacity: 0 }}
+                  animate={mainControls}
+                  onViewportEnter={() => {
+                    mainControls.start({ opacity: 1 })
+                  }}
+                  transition={{
+                    duration: 0.35,
+                    delay: index * 0.3,
+                  }}>
+                  <div
+                    key={feature.name}
+                    className='flex flex-col hover:bg-gray-800 p-2 rounded-md transition ease-out'>
+                    <dt className='text-base font-semibold leading-7 text-white'>
+                      <div className='mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600'>
+                        <feature.icon
+                          className='h-6 w-6 text-white'
+                          aria-hidden='true'
+                        />
+                      </div>
+                      <p className='text-2xl'>{feature.name}</p>
+                    </dt>
+                    <dd className='mt-1 flex flex-auto flex-col text-base leading-7 text-gray-400'>
+                      <p className='flex-auto'>{feature.description}</p>
+                      {feature.list && (
+                        <ul className='ml-8 md:ml-12 grid grid-cols-2 md:grid-cols-3'>
+                          {feature.list.map((item) => (
+                            <li className='list-disc'>{item}</li>
+                          ))}
+                        </ul>
+                      )}
+                      <p className='mt-6'>
+                        <a
+                          href={feature.href}
+                          className='text-sm font-semibold leading-6 text-blue-600 hover:underline hover:text-blue-500 transition ease-out'>
+                          Learn more <span aria-hidden='true'>→</span>
+                        </a>
+                      </p>
+                    </dd>
                   </div>
-                  <p className='text-2xl'>{feature.name}</p>
-                </dt>
-                <dd className='mt-1 flex flex-auto flex-col text-base leading-7 text-gray-400'>
-                  <p className='flex-auto'>{feature.description}</p>
-                  {feature.list && (
-                    <ul className='ml-8 md:ml-12 grid grid-cols-2 md:grid-cols-3'>
-                      {feature.list.map((item) => (
-                        <li className='list-disc'>{item}</li>
-                      ))}
-                    </ul>
-                  )}
-                  <p className='mt-6'>
-                    <a
-                      href={feature.href}
-                      className='text-sm font-semibold leading-6 text-blue-600 hover:underline hover:text-blue-500 transition ease-out'>
-                      Learn more <span aria-hidden='true'>→</span>
-                    </a>
-                  </p>
-                </dd>
-              </div>
-            ))}
-          </dl>
+                </m.div>
+              ))}
+            </dl>
+          </div>
         </div>
-      </div>
+      </AnimatePresence>
     </div>
   )
 }
