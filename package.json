@@ -9,16 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.6.2",
+    "@headlessui/react": "^1.7.15",
+    "@heroicons/react": "^2.0.18",
+    "@splinetool/react-spline": "^2.2.1",
+    "@splinetool/runtime": "^0.9.78",
+    "@tailwindcss/forms": "^0.5.3",
     "autoprefixer": "10.4.14",
     "next": "13.4.6",
     "postcss": "8.4.24",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "tailwindcss": "3.3.2",
-    "@emailjs/browser": "^3.6.2",
-    "@splinetool/react-spline": "^2.2.1",
-    "@splinetool/runtime": "^0.9.78",
     "react-icons": "^4.4.0",
-    "react-scroll": "^1.8.7"
+    "react-scroll": "^1.8.7",
+    "tailwindcss": "3.3.2"
   }
 }

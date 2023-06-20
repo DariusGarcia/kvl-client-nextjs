@@ -1,7 +1,8 @@
 import '../styles/globals.css'
-// import Navbar from '@/components/navbar/navbar'
-// import Footer from '@/components/footer'
 import Head from 'next/head'
+import NavBar from '@/components/navbar'
+
+// import Footer from '@/components/footer'
 
 export default function MyApp({ Component, pageProps }) {
   return (
@@ -10,7 +11,7 @@ export default function MyApp({ Component, pageProps }) {
         <title>First Property</title>
       </Head>
 
-      {/* <Navbar /> */}
+      <NavBar />
 
       <Component {...pageProps} />
       {/* <Footer /> */}
