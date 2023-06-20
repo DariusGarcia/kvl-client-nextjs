@@ -22,9 +22,11 @@ export default function ProductFeatures() {
           </p>
         </div>
         <div className='mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none'>
-          <dl className='grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none md:grid-cols-2'>
+          <dl className='grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none md:grid-cols-2 '>
             {features.map((feature) => (
-              <div key={feature.name} className='flex flex-col'>
+              <div
+                key={feature.name}
+                className='flex flex-col hover:bg-gray-800 p-2 rounded-md transition ease-out'>
                 <dt className='text-base font-semibold leading-7 text-white'>
                   <div className='mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600'>
                     <feature.icon
@@ -34,7 +36,7 @@ export default function ProductFeatures() {
                   </div>
                   <p className='text-2xl'>{feature.name}</p>
                 </dt>
-                <dd className='mt-1 flex flex-auto flex-col text-base leading-7 text-gray-300'>
+                <dd className='mt-1 flex flex-auto flex-col text-base leading-7 text-gray-400'>
                   <p className='flex-auto'>{feature.description}</p>
                   {feature.list && (
                     <ul className='ml-8 md:ml-12 grid grid-cols-2 md:grid-cols-3'>
@@ -46,7 +48,7 @@ export default function ProductFeatures() {
                   <p className='mt-6'>
                     <a
                       href={feature.href}
-                      className='text-sm font-semibold leading-6 text-blue-600'>
+                      className='text-sm font-semibold leading-6 text-blue-600 hover:underline hover:text-blue-500 transition ease-out'>
                       Learn more <span aria-hidden='true'>→</span>
                     </a>
                   </p>
@@ -65,21 +67,21 @@ const features = [
     name: 'Phones',
     description:
       'Choose from a selection of top brand Smartphones to help you and your staff stay connected wherever you go. Expand the capabilities of your phones with access to secure and business-friendly apps, conferencing tools, cloud sharing and more.',
-    href: '#',
+    href: '/services',
     icon: PhoneIcon,
   },
   {
     name: 'Tablets',
     description:
       'Choose from a range of quality tablets which provide consistent internet connectivity and secure access to all of your business data and applications, while on the go. We provide the tools you need to be efficient and productive no matter where you are; give a sales presentation, write/edit business content, and/or review and update customer data – all from the palm of your hand.',
-    href: '#',
+    href: '/services',
     icon: DeviceTabletIcon,
   },
   {
     name: 'Laptops',
     description:
       'Choose from a range of quality laptops which provide consistent internet connectivity and secure access to all of your business data and applications, while on the go. We provide the tools you need to be efficient and productive no matter where you are; give a sales presentation, write/edit business content, and/or review and update customer data.',
-    href: '#',
+    href: '/services',
     icon: ComputerDesktopIcon,
   },
   {
@@ -95,7 +97,7 @@ const features = [
       'Mounting products',
       'Extra batteries and more',
     ],
-    href: '#',
+    href: '/services',
     icon: CogIcon,
   },
 ]

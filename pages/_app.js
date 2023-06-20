@@ -9,7 +9,7 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>First Property</title>
+        <title>KVL Communications</title>
       </Head>
 
       <NavBar />

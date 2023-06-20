@@ -1,6 +1,7 @@
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import Link from 'next/link'
 
 export default function NavBar() {
   return (
@@ -22,16 +23,20 @@ export default function NavBar() {
               </div>
               <div className='flex flex-1 items-center justify-center sm:items-stretch sm:justify-center'>
                 <div className='flex flex-shrink-0 items-center'>
-                  <img
-                    className='block h-8 w-auto lg:hidden'
-                    src={'/white.jpg'}
-                    alt='Your Company'
-                  />
-                  <img
-                    className='hidden h-12 w-full lg:block'
-                    src={'/white.jpg'}
-                    alt='Your Company'
-                  />
+                  <Link href='/'>
+                    <img
+                      className='block h-8 w-auto lg:hidden'
+                      src={'/white.jpg'}
+                      alt='Your Company'
+                    />
+                  </Link>
+                  <Link href='/'>
+                    <img
+                      className='hidden h-12 w-full lg:block'
+                      src={'/white.jpg'}
+                      alt='Your Company'
+                    />
+                  </Link>
                 </div>
                 <div className='hidden sm:ml-6 sm:flex sm:space-x-8'>
                   {/* Current: "border-blue-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
@@ -65,27 +70,27 @@ export default function NavBar() {
               {/* Current: "bg-blue-50 border-blue-500 text-blue-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" */}
               <Disclosure.Button
                 as='a'
-                href='#'
+                href='/'
                 className='block border-l-4 border-blue-500 bg-blue-50 py-2 pl-3 pr-4 text-base font-medium text-blue-700'>
-                Dashboard
+                Home
               </Disclosure.Button>
               <Disclosure.Button
                 as='a'
-                href='#'
+                href='/services'
                 className='block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700'>
-                Team
+                Services
               </Disclosure.Button>
               <Disclosure.Button
                 as='a'
-                href='#'
+                href='/stripe/payments'
                 className='block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700'>
-                Projects
+                Payments
               </Disclosure.Button>
               <Disclosure.Button
                 as='a'
-                href='#'
+                href='/contact'
                 className='block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700'>
-                Calendar
+                Contact
               </Disclosure.Button>
             </div>
           </Disclosure.Panel>

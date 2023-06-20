@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Footer() {
   return (
     <footer className='bg-gray-900 text-white'>
@@ -7,30 +9,22 @@ export default function Footer() {
           aria-label='Footer'>
           {navigation.main.map((item) => (
             <div key={item.name} className='pb-6'>
-              <a href={item.href} className='text-sm leading-6  hover:'>
+              <a
+                href={item.href}
+                className='text-sm leading-6  hover:text-gray-400 transition ease-out hover:underline'>
                 {item.name}
               </a>
             </div>
           ))}
         </nav>
-        {/* <div className='mt-10 flex justify-center space-x-10'>
-          {navigation.social.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              className=' hover:'>
-              <span className='sr-only'>{item.name}</span>
-              <item.icon className='h-6 w-6' aria-hidden='true' />
-            </a>
-          ))}
-        </div> */}
-        <div className='w-full flex justify-center mt-8'>
+
+        <Link href='/' className='w-full flex justify-center mt-8'>
           <img
             src='/dark.PNG'
             alt='logo'
             className='w-48 rounded-md flex justify-center items-center'
           />
-        </div>
+        </Link>
         <p className='mt-10 text-center text-xs leading-5 '>
           &copy; {new Date().getFullYear()} KVL Communications, Inc. All rights
           reserved.
@@ -110,4 +104,20 @@ const navigation = {
   //       ),
   //     },
   //   ],
+}
+
+// SOCIALS
+
+{
+  /* <div className='mt-10 flex justify-center space-x-10'>
+          {navigation.social.map((item) => (
+            <a
+              key={item.name}
+              href={item.href}
+              className=' hover:'>
+              <span className='sr-only'>{item.name}</span>
+              <item.icon className='h-6 w-6' aria-hidden='true' />
+            </a>
+          ))}
+        </div> */
 }

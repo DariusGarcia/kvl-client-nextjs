@@ -12,14 +12,14 @@ const tiers = [
       'Business support',
       'As many products as you want',
       'Basic analytics',
-      '48-hour support response time',
+      '24-hour support response time',
     ],
   },
 ]
 
 export default function LandingPricing() {
   return (
-    <div className='isolate overflow-hidden bg-gray-900 w-screen pt-24'>
+    <div className='isolate overflow-hidden bg-gray-900 w-screen md:pt-12'>
       <div className='mx-auto max-w-7xl px-6 pb-96 pt-24 text-center sm:pt-32 lg:px-8'>
         <div className='mx-auto max-w-4xl'>
           <h2 className='text-xl font-semibold leading-7 text-blue-500'>
@@ -32,10 +32,10 @@ export default function LandingPricing() {
           </p>
         </div>
         <div className='relative mt-6'>
-          <p className='mx-auto max-w-2xl text-lg leading-8 text-white/60'>
+          {/* <p className='mx-auto max-w-2xl text-lg leading-8 text-white/60'>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit
             numquam eligendi quos odit doloribus molestiae voluptatum.
-          </p>
+          </p> */}
           <svg
             viewBox='0 0 1208 1024'
             className='absolute -top-10 left-1/2 -z-10 h-[64rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:-top-12 md:-top-20 lg:-top-12 xl:top-0'>
@@ -70,11 +70,8 @@ export default function LandingPricing() {
                       {tier.name}
                     </h3>
                     <div className='mt-4 flex items-baseline gap-x-2'>
-                      <span className='text-5xl font-bold tracking-tight text-gray-900'>
+                      <span className='text-2xl md:text-3xl font-bold tracking-tight text-gray-900'>
                         {tier.priceMonthly}
-                      </span>
-                      <span className='text-base font-semibold leading-7 text-gray-600'>
-                        /month
                       </span>
                     </div>
                     <p className='mt-6 text-base leading-7 text-gray-600'>
@@ -97,7 +94,7 @@ export default function LandingPricing() {
                   <a
                     href='/contact'
                     aria-describedby={tier.id}
-                    className='mt-8 block rounded-md bg-blue-600 px-3.5 py-2 text-center text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600'>
+                    className='mt-8 block rounded-md bg-blue-600 transition ease-out px-3.5 py-2 text-center text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600'>
                     Speak to a sales representative today
                   </a>
                 </div>
