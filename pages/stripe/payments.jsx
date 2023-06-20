@@ -45,15 +45,17 @@ export default function PaymentsPage() {
                 ))}
               </ul>
               <div className='mt-10 flex'>
-                <Link
-                  href='https://kvl-server.herokuapp.com/create-checkout-session'
+                <form
+                  action='https://kvl-server.herokuapp.com/create-checkout-session'
+                  method='POST'
                   className='text-md font-medium leading-6 text-white w-full'>
-                  <button className='bg-blue-600 hover:bg-blue-500 transition ease-out p-2 rounded-md w-full'>
-                    {' '}
-                    Go to Stripe checkout portal{' '}
+                  <button
+                    type='submit'
+                    className='bg-blue-600 hover:bg-blue-500 transition ease-out p-2 rounded-md w-full'>
+                    Go to Stripe checkout portal
                     <span aria-hidden='true'>&rarr;</span>
                   </button>
-                </Link>
+                </form>
               </div>
             </div>
           </div>
