@@ -95,7 +95,7 @@ export default function LandingPricing() {
                     </ul>
                   </div>
                   <a
-                    href={tier.href}
+                    href='/contact'
                     aria-describedby={tier.id}
                     className='mt-8 block rounded-md bg-blue-600 px-3.5 py-2 text-center text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600'>
                     Speak to a sales representative today

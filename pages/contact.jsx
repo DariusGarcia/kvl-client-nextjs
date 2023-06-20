@@ -72,8 +72,8 @@ export default function ContactPage() {
                 <dd>
                   <a
                     className='hover:text-gray-900'
-                    href='mailto:hello@example.com'>
-                    hello@example.com
+                    href='mailto:info@kvlcommunications.com'>
+                    info@kvlcommunications.com
                   </a>
                 </dd>
               </div>

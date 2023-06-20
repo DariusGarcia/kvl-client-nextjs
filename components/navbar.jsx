@@ -36,23 +36,23 @@ export default function NavBar() {
                 <div className='hidden sm:ml-6 sm:flex sm:space-x-8'>
                   {/* Current: "border-blue-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
                   <a
-                    href='#'
-                    className='inline-flex items-center border-b-2 border-blue-500 px-1 pt-1 text-sm font-medium text-gray-900'>
+                    href='/'
+                    className='inline-flex items-center  hover:border-b border-blue-500 transition ease-out  px-1 pt-1 text-sm font-medium hover:text-gray-500'>
                     Home
                   </a>
                   <a
                     href='/services'
-                    className='inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700'>
+                    className='inline-flex items-center hover:border-b border-blue-500 transition ease-out  px-1 pt-1 text-sm font-medium hover:text-gray-500'>
                     Services
                   </a>
                   <a
                     href='/stripe/payments'
-                    className='inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700'>
+                    className='inline-flex items-center hover:border-b border-blue-500 transition ease-out  px-1 pt-1 text-sm font-medium hover:text-gray-500'>
                     Payments
                   </a>
                   <a
                     href='/contact'
-                    className='inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700'>
+                    className='inline-flex items-center hover:border-b border-blue-500 transition ease-out  px-1 pt-1 text-sm font-medium hover:text-gray-500'>
                     Contact
                   </a>
                 </div>
