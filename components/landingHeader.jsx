@@ -8,7 +8,7 @@ export default function LandingHeader() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    const timeout = 1500 // 2 seconds
+    const timeout = 1500 // 1.5 seconds
 
     const loadingTimer = setTimeout(() => {
       setLoading(false)
@@ -38,7 +38,7 @@ export default function LandingHeader() {
                 <m.h1
                   variants={cardVariants}
                   className='mt-12 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl'>
-                  Brand name products to enrich your online business
+                  Brand name products to enrich your business
                 </m.h1>
                 <m.p
                   variants={cardVariants}
@@ -66,12 +66,12 @@ export default function LandingHeader() {
           <div className='relative lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0 rounded-lg'>
             <div className='aspect-[3/2] w-full bg-gray-50 object-cover lg:absolute lg:inset-0 lg:aspect-auto lg:h-full shadow-lg '>
               {loading ? (
-                // Render the loading screen here
+                // Render the loading screen
                 <div className='flex justify-center items-center h-full'>
                   <CircularProgress />
                 </div>
               ) : (
-                // Render the Spline component here
+                // Render the Spline component
                 <Spline
                   onLoad={() => setLoading(false)}
                   scene='https://prod.spline.design/uWliGq2xJzALdGJP/scene.splinecode'
@@ -85,6 +85,7 @@ export default function LandingHeader() {
   )
 }
 
+// Framer Motion animation
 const cardVariants = {
   hidden: {
     y: 200,
