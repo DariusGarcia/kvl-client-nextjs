@@ -27,14 +27,14 @@ export default function NavBar() {
                     <img
                       className='block h-8 w-auto lg:hidden'
                       src={'/white.jpg'}
-                      alt='Your Company'
+                      alt='KVL Communications logo'
                     />
                   </Link>
                   <Link href='/'>
                     <img
-                      className='hidden h-12 w-full lg:block'
+                      className='hidden h-12 w-auto lg:block'
                       src={'/white.jpg'}
-                      alt='Your Company'
+                      alt='KVL Communications logo'
                     />
                   </Link>
                 </div>
