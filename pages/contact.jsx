@@ -1,3 +1,4 @@
+import MailChimpForm from '@/components/mailchimpForm'
 import {
   BuildingOffice2Icon,
   EnvelopeIcon,
@@ -79,6 +80,9 @@ export default function ContactPage() {
               </div>
             </dl>
           </div>
+          <section className='mt-12'>
+            <MailChimpForm />
+          </section>
         </div>
         <form
           action='#'

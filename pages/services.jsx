@@ -1,6 +1,7 @@
 import CTA from '@/components/CTA'
 import LogoCloud from '@/components/logoCloud'
 import Stats from '@/components/stats'
+import MailChimpForm from '@/components/mailchimpForm'
 import {
   ChatBubbleOvalLeftEllipsisIcon,
   CogIcon,
@@ -67,6 +68,9 @@ export default function ServicesPage() {
           <div className='w-screen bg-gray-700 my-24'>
             <CTA />
           </div>
+          <section>
+            <MailChimpForm />
+          </section>
         </div>
       </AnimatePresence>
     </div>

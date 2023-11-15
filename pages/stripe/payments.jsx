@@ -1,4 +1,5 @@
 import ContactSales from '@/components/contactSales'
+import MailChimpForm from '@/components/mailchimpForm'
 import { CheckCircleIcon } from '@heroicons/react/20/solid'
 import Link from 'next/link'
 

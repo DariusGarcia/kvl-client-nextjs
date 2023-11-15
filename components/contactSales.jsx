@@ -1,3 +1,5 @@
+import MailChimpForm from './mailchimpForm'
+
 export default function ContactSales() {
   return (
     <div className='bg-white py-24 sm:py-48'>
@@ -52,6 +54,9 @@ export default function ContactSales() {
           </div>
         </div>
       </div>
+      <section className='mt-24 flex justify-center'>
+        <MailChimpForm />
+      </section>
     </div>
   )
 }
