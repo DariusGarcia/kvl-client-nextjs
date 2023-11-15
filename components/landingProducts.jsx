@@ -35,8 +35,8 @@ export default function ProductFeatures() {
                     mainControls.start({ opacity: 1 })
                   }}
                   transition={{
-                    duration: 0.35,
-                    delay: index * 0.3,
+                    duration: 0.3,
+                    delay: index * 0.1,
                   }}>
                   <div className='flex flex-col hover:bg-gray-800 p-2 rounded-md transition ease-out'>
                     <dt className='text-base font-semibold leading-7 text-white'>

@@ -4,14 +4,12 @@ export default function CTA() {
       <div className='px-6 py-24 sm:px-6 sm:py-32 lg:px-8'>
         <div className='mx-auto max-w-2xl text-center'>
           <h2 className='text-3xl font-bold tracking-tight sm:text-4xl'>
-            Boost your productivity.
+            Together, we can unlock the full potential of your
+            telecommunications systems.
           </h2>
-          <h3 className='text-3xl font-bold tracking-tight sm:text-4xl mt-4'>
-            Get started with us
-          </h3>
           <p className='mx-auto mt-6 max-w-xl text-lg leading-8'>
-            We’re here to help you succeed. Reach out to one of our experts
-            today.
+            Schedule your consultation today. Let's embark on a journey to a
+            brighter, more connected future for your business.
           </p>
           <div className='mt-10 flex items-center justify-center gap-x-6'>
             <a

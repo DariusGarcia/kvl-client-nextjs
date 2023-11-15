@@ -1,5 +1,6 @@
 import CTA from '@/components/CTA'
 import LogoCloud from '@/components/logoCloud'
+import Stats from '@/components/stats'
 import {
   ChatBubbleOvalLeftEllipsisIcon,
   CogIcon,
@@ -16,7 +17,7 @@ export default function ServicesPage() {
   return (
     <div className='bg-white py-12 sm:py-24'>
       <AnimatePresence>
-        <div className='mx-auto max-w-7xl px-6 lg:px-8 flex flex-col items-center gap-4 justify-center'>
+        <div className='mx-auto max-w-7xl px-2 lg:px-8 flex flex-col items-center gap-4 justify-center'>
           <m.div
             initial='hidden'
             animate='visible'
@@ -59,6 +60,9 @@ export default function ServicesPage() {
               ))}
             </dl>
           </div>
+          <section className='w-full mt-24'>
+            <Stats />
+          </section>
           <LogoCloud />
           <div className='w-screen bg-gray-700 my-24'>
             <CTA />
