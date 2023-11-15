@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import axios from 'axios'
-
+import { RingLoader } from 'react-spinners'
 import SubscribeSuccess from './errorBanners/subscribeSuccess'
 import SubscribeError from './errorBanners/subscribeErrror'
 
@@ -8,9 +8,11 @@ export default function MailChimpForm() {
   const [email, setEmail] = useState('')
   const [successMessage, setSuccessMessage] = useState('')
   const [errorMessage, setErrorMessage] = useState('')
+  const [loading, setLoading] = useState(false)
 
   const handleSubscribe = async (e) => {
     e.preventDefault()
+    setLoading(true)
     try {
       const response = await axios.post('/api/subscribe', { email })
       console.log('Subscription successful:', response.data)
@@ -21,6 +23,8 @@ export default function MailChimpForm() {
       console.error('Subscription error:', error)
       setSuccessMessage('') // Reset success message if there was one before
       setErrorMessage('Subscription failed. Please try again.') // Set error message
+    } finally {
+      setLoading(false)
     }
   }
 
@@ -51,7 +55,13 @@ export default function MailChimpForm() {
           <button
             onClick={handleSubscribe}
             className='mt-3 inline-flex w-full items-center justify-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 sm:ml-3 sm:mt-0 sm:w-auto'>
-            Subscribe
+            {loading ? (
+              <div className='w-full flex items-center justify-center'>
+                <RingLoader color={'#ffffff'} loading={loading} size={20} />
+              </div>
+            ) : (
+              'Subscribe'
+            )}
           </button>
         </form>
         {successMessage && <SubscribeSuccess successMessage={successMessage} />}
