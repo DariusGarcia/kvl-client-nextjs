@@ -4,7 +4,8 @@ import axios from 'axios'
 export default function MailChimpForm() {
   const [email, setEmail] = useState('')
 
-  const handleSubscribe = async () => {
+  const handleSubscribe = async (e) => {
+    e.preventDefault()
     try {
       const response = await axios.post('/api/subscribe', { email })
       console.log('Subscription successful:', response.data)

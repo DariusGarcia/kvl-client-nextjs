@@ -1,7 +1,7 @@
 const mailchimp = require('@mailchimp/mailchimp_marketing')
 
 const apiKey = process.env.MAILCHIMP_API_KEY
-const listId = '5b73ff78df'
+const listId = process.env.MAILCHIMP_LIST_ID
 const serverPrefix = 21
 
 mailchimp.setConfig({
