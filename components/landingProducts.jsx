@@ -28,6 +28,7 @@ export default function ProductFeatures() {
             <dl className='grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none md:grid-cols-2 '>
               {features.map((feature, index) => (
                 <m.div
+                  key={feature.name}
                   initial={{ opacity: 0 }}
                   animate={mainControls}
                   onViewportEnter={() => {
@@ -37,9 +38,7 @@ export default function ProductFeatures() {
                     duration: 0.35,
                     delay: index * 0.3,
                   }}>
-                  <div
-                    key={feature.name}
-                    className='flex flex-col hover:bg-gray-800 p-2 rounded-md transition ease-out'>
+                  <div className='flex flex-col hover:bg-gray-800 p-2 rounded-md transition ease-out'>
                     <dt className='text-base font-semibold leading-7 text-white'>
                       <div className='mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600'>
                         <feature.icon
@@ -53,8 +52,10 @@ export default function ProductFeatures() {
                       <p className='flex-auto'>{feature.description}</p>
                       {feature.list && (
                         <ul className='ml-8 md:ml-12 grid grid-cols-2 md:grid-cols-3'>
-                          {feature.list.map((item) => (
-                            <li className='list-disc'>{item}</li>
+                          {feature.list.map((item, index) => (
+                            <li className='list-disc' key={index}>
+                              {item}
+                            </li>
                           ))}
                         </ul>
                       )}
