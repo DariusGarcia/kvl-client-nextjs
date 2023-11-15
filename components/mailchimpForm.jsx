@@ -29,7 +29,7 @@ export default function MailChimpForm() {
   }
 
   return (
-    <div className='bg-gray-50 w-full max-w-4xl flex flex-col justify-center items-center shadow sm:rounded-lg'>
+    <div className='bg-gray-50 w-full max-w-4xl flex flex-col justify-center items-center shadow rounded-md'>
       <div className='px-4 py-12 sm:p-12'>
         <h3 className='text-2xl font-semibold leading-6 text-gray-900'>
           Subscribe to our newsletter
