@@ -5,6 +5,7 @@ import LandingPricing from '@/components/landingPricing'
 import ProductFeatures from '@/components/landingProducts'
 import LogoCloud from '@/components/logoCloud'
 import MailChimpForm from '@/components/mailchimpForm'
+import Stats from '@/components/stats'
 
 export default function LandingPage() {
   return (
@@ -24,17 +25,18 @@ export default function LandingPage() {
         <div className='max-w-7xl flex flex-col justify-center items-center bg-white'>
           <LandingHeader />
           <LogoCloud />
-          <section className='mt-12'>
-            <MailChimpForm />
-          </section>
-          <div className='bg-gray-900 w-screen mt-36'>
+
+          <div className='bg-gray-900 w-screen mt-12'>
+            <Stats />
             <ProductFeatures />
           </div>
           <div className=''>
             <LandingPricing />
           </div>
           <LandingCTA />
-          <MailChimpForm />
+          <section className='mt-12 md:mt-24'>
+            <MailChimpForm />
+          </section>
         </div>
       </div>
     </>

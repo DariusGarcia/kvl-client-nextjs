@@ -12,7 +12,7 @@ import { AnimatePresence, motion as m, useAnimation } from 'framer-motion'
 export default function ProductFeatures() {
   const mainControls = useAnimation()
   return (
-    <div className=' py-24  text-white'>
+    <div className='py-24 text-white'>
       <AnimatePresence>
         <div className='mx-auto max-w-7xl px-6 lg:px-8'>
           <div className='mx-auto max-w-2xl lg:mx-0'>

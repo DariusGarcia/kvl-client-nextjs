@@ -1,3 +1,6 @@
+import { ArrowRightIcon } from '@heroicons/react/20/solid'
+import Link from 'next/link'
+
 const stats = [
   { id: 1, name: '', value: 'Strategic Consultation' },
   { id: 2, name: '', value: 'Enhanced connectivity' },
@@ -28,15 +31,16 @@ export default function Stats() {
         </div>
         <div className='mx-auto max-w-2xl lg:mx-0 lg:max-w-xl'>
           <h2 className='text-base font-semibold leading-8 text-blue-400'>
-            Our track record
+            Introducing our full Telecommunication Consultation Services.
           </h2>
           <p className='mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl'>
             Let us help you achieve great efficiency, connectivity, and growth
           </p>
           <p className='mt-6 text-lg leading-8 text-gray-300'>
-            With over 25 years of combined telecom experience, our specialists
-            will assess your current telecommunications infrastructure and
-            consult with you on a non-biased path for future growth.
+            Today's fast-paced digital world requires staying ahead in the
+            ever-changing telecommunications sector. Our expertise will guide
+            you through communication technology and provide a personalized
+            approach to meet your needs.
           </p>
         </div>
         <dl className='mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 text-white sm:mt-20 sm:grid-cols-2 sm:gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-3'>
@@ -51,6 +55,16 @@ export default function Stats() {
             </div>
           ))}
         </dl>
+        <div className='h-12 w-full md:w-max p-2 flex flex-row items-center justify-center md:justify-start mt-12 md:mt-24 bg-blue-600 hover:bg-blue-500 transition ease-in-out rounded-md'>
+          <Link
+            href='/contact'
+            className='flex flex-row items-center gap-2 text-white hover:underline transition ease-in-out font-semibold'>
+            Schedule your consultation today{' '}
+            <span className='w-8 text-white'>
+              <ArrowRightIcon size={5} />
+            </span>
+          </Link>
+        </div>
       </div>
     </div>
   )

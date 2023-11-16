@@ -19,8 +19,8 @@ const tiers = [
 
 export default function LandingPricing() {
   return (
-    <div className='isolate overflow-hidden bg-gray-900 w-screen md:pt-12'>
-      <div className='mx-auto max-w-7xl px-6 pb-96 pt-24 text-center sm:pt-32 lg:px-8'>
+    <div className='isolate overflow-hidden bg-gray-900 w-screen'>
+      <div className='mx-auto max-w-7xl px-6 pb-96 pt-24 text-center sm:pt-12 lg:px-8'>
         <div className='mx-auto max-w-4xl'>
           <h2 className='text-xl font-semibold leading-7 text-blue-500'>
             Pricing
