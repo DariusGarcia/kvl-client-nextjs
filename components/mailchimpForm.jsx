@@ -2,7 +2,7 @@ import { useState } from 'react'
 import axios from 'axios'
 import { RingLoader } from 'react-spinners'
 import SubscribeSuccess from './errorBanners/subscribeSuccess'
-import SubscribeError from './errorBanners/subscribeErrror'
+import SubscribeError from './errorBanners/subscribeError'
 
 export default function MailChimpForm() {
   const [email, setEmail] = useState('')
