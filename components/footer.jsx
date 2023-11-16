@@ -15,14 +15,13 @@ export default function Footer() {
     setLoading(true)
     try {
       const response = await axios.post('/api/subscribe', { email })
-      console.log('Subscription successful:', response.data)
       setSuccessMessage('Subscription successful! Thank you for subscribing.')
-      setErrorMessage('') // Reset error message if there was one before
+      setErrorMessage('')
       setEmail('')
+      return response.data
     } catch (error) {
-      console.error('Subscription error:', error)
-      setSuccessMessage('') // Reset success message if there was one before
-      setErrorMessage('Subscription failed. Please try again.') // Set error message
+      setSuccessMessage('')
+      setErrorMessage('Subscription failed. Please try again.')
     } finally {
       setLoading(false)
     }
@@ -50,7 +49,7 @@ export default function Footer() {
                   role='list'
                   className='flex flex-row gap-12  items-center mt-6 w-full'>
                   {navigation.map((item) => (
-                    <li key={item.name}>
+                    <li key={item.id}>
                       <a
                         href={item.href}
                         className='text-sm leading-6 text-gray-300 hover:text-white hover:underline transition ease-in-out'>

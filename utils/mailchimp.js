@@ -9,6 +9,8 @@ mailchimp.setConfig({
   server: `us${serverPrefix}`, // Adjust the server prefix based on your API key
 })
 
+// handles adding a user to the mailchimp audience list
+
 export const subscribeUser = async (email) => {
   try {
     const response = await mailchimp.lists.addListMember(listId, {
@@ -18,7 +20,6 @@ export const subscribeUser = async (email) => {
 
     return response
   } catch (error) {
-    console.error('Mailchimp subscription error:', error)
     throw error
   }
 }

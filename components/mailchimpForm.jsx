@@ -15,14 +15,13 @@ export default function MailChimpForm() {
     setLoading(true)
     try {
       const response = await axios.post('/api/subscribe', { email })
-      console.log('Subscription successful:', response.data)
       setSuccessMessage('Subscription successful! Thank you for subscribing.')
-      setErrorMessage('') // Reset error message if there was one before
+      setErrorMessage('')
       setEmail('')
+      return response.data
     } catch (error) {
-      console.error('Subscription error:', error)
-      setSuccessMessage('') // Reset success message if there was one before
-      setErrorMessage('Subscription failed. Please try again.') // Set error message
+      setSuccessMessage('')
+      setErrorMessage('Subscription failed. Please try again.')
     } finally {
       setLoading(false)
     }
