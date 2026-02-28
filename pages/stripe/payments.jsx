@@ -53,7 +53,7 @@ export default function PaymentsPage() {
                 </ul>
                 <div className='mt-10 flex'>
                   <form
-                    action='https://kvl-server.herokuapp.com/create-checkout-session'
+                    action='https://kvl-server-bbf126535607.herokuapp.com/create-checkout-session'
                     method='POST'
                     className='text-md font-medium leading-6 text-white w-full'>
                     <button
